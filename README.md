@@ -33,7 +33,7 @@ Different stocks produce different results — try Apple, Reliance, NVIDIA, or B
 
 **Option A — Clone with Git (recommended):**
 ```bash
-git clone https://github.com/YOUR_USERNAME/var-engine.git
+git clone https://github.com/pb2k3/VaR-Engine-Risk-Analytics-Dashboard.git
 cd var-engine
 pip3 install -r requirements.txt
 ```
