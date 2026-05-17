@@ -33,7 +33,7 @@ Different stocks produce different results — try Apple, Reliance, NVIDIA, or B
 
 **Option A — Clone with Git (recommended):**
 ```bash
-git clone https://github.com/pb2k3/VaR-Engine-Risk-Analytics-Dashboard.git
+git clone https://github.com/YOUR_USERNAME/var-engine.git
 cd var-engine
 pip3 install -r requirements.txt
 ```
@@ -100,7 +100,7 @@ streamlit run var_engine.py
 5. **Risk Metrics Table** — all confidence levels for both methods
 6. **Auto-Interpretation** — rules-based text explaining the result for your specific stock
 7. **Methodology** — formulas, assumptions, limitations
-8. **Raw Data Explorer** — full historical dataset with CSV download
+8. **Raw Data Explorer** — full historical dataset view
 
 ---
 
@@ -126,12 +126,12 @@ $$r_{sim} = \mu + \sigma \cdot \Phi^{-1}(U), \quad U \sim \text{Uniform}(0,1)$$
 Simulated prices follow geometric Brownian motion: $P_{sim} = P_0 \cdot e^{r_{sim}}$.
 
 ### Value at Risk (VaR)
-$$\text{VaR}_\alpha = \text{percentile}(\text{P\&L},\ 1-\alpha)$$
+$$\text{VaR}_\alpha = \text{percentile}(\text{PnL},\ 1-\alpha)$$
 
 A 95% VaR is the 5th percentile worst outcome — the loss exceeded only 5% of the time.
 
 ### Expected Shortfall (ES / CVaR)
-$$\text{ES}_\alpha = \mathbb{E}[\text{P\&L} \mid \text{P\&L} \le \text{VaR}_\alpha]$$
+$$\text{ES}_\alpha = \mathbb{E}[\text{PnL} \mid \text{PnL} \le \text{VaR}_\alpha]$$
 
 The average loss conditional on losing more than VaR — captures tail severity, not just frequency.
 
@@ -180,6 +180,12 @@ pip install -r requirements.txt
 **Yahoo Finance returns no data** — Yahoo occasionally rate-limits. Wait 60 seconds and try again, or use a different ticker.
 
 **Indian stocks not loading** — Make sure to add the exchange suffix: `RELIANCE.NS` for NSE, `RELIANCE.BO` for BSE.
+
+---
+
+## ⚠️ Data Usage Disclaimer
+
+This dashboard uses the `yfinance` library to fetch historical market data from Yahoo Finance for **educational and research purposes only**. The data is displayed for in-session analysis and is not stored, redistributed, or made available for download. Users should comply with Yahoo Finance's terms of service. For commercial or production use, consider a licensed data provider such as Alpha Vantage, Polygon.io, or a paid Yahoo Finance subscription.
 
 ---
 
