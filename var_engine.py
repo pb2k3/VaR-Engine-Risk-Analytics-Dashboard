@@ -859,15 +859,6 @@ with st.expander("🗂️ View Raw Historical Data"):
     )
     
     st.dataframe(df_display, use_container_width=True)
-    
-    # Download button
-    csv = df.to_csv()
-    st.download_button(
-        "📥 Download CSV",
-        data=csv,
-        file_name=f"{ticker}_historical_data.csv",
-        mime="text/csv",
-    )
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
