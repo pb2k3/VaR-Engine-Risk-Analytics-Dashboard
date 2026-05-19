@@ -1,5 +1,7 @@
 # 📊 VaR Engine — Equity Risk Analytics Dashboard
 
+N**ote: This is a project for educational purposes only, this is not financial advice.**
+
 A Python + Streamlit dashboard that estimates equity tail risk using Monte Carlo simulation, comparing **Standard Deviation** vs **Parkinson's Volatility** as estimators. Type any ticker symbol — get instant Value at Risk, Expected Shortfall, and full distribution analysis.
 
 Built as an FRM (Financial Risk Manager) portfolio project.
